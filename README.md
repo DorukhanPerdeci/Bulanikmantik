@@ -1,51 +1,76 @@
-# 🔥 Akıllı Oda İklim Kontrolcüsü
+# 🌡️ Akıllı Oda İklim Kontrolü (Fuzzy Logic Tabanlı)
 
-Bu proje, bir odanın ortam koşullarına göre **ısıtma gücünü** ve **havalandırma fan hızını** otomatik olarak ayarlayan, Python tabanlı bir **bulanık mantık kontrol sistemi** sunar. Sistem, sıcaklık, nem, CO₂ seviyesi, dış sıcaklık ve oda içindeki kişi sayısı gibi etmenleri analiz ederek karar verir.
+Bu proje, **Python** programlama dili ve **bulanık mantık (fuzzy logic)** yaklaşımı ile geliştirilmiş, kullanıcı dostu bir **oda içi iklim kontrol sistemi** uygulamasıdır. Proje, ortam sıcaklığı, nem, dış sıcaklık, CO₂ seviyesi ve içerideki kişi sayısını göz önünde bulundurarak **ısıtma** ve **fan hızını** otomatik olarak ayarlamaktadır.
+
+## 🚀 Proje Özellikleri
+
+- 🔁 **Bulanık Mantık Sistemi:** 5 girdi – 2 çıktı yapısı ile çoklu çevresel faktöre göre kontrol.
+- 🧠 **Gerçek Hayat Senaryosu:** Ortam konforunu optimize etmek üzere kurgulandı.
+- 🖥️ **Kullanıcı Arayüzü (GUI):** Tkinter ile kolay ve sade bir arayüz.
+- 🧪 **Kurallar Sistemi:** IF–THEN bulanık kurallarla mantıklı karar verme.
+- 🔧 **Modüler Kodlama:** Genişletilebilir Python modülleri ile tasarım.
 
 ---
 
-## 🎯 Proje Amacı
+## 📥 Girdiler
 
-Günlük yaşamda sıkça karşılaşılan iç ortam konforunu artırma ihtiyacına yönelik olarak geliştirilen bu uygulama, enerji tasarrufu ve hava kalitesini iyileştirmeyi hedefler. Manuel müdahale olmadan ortam koşullarına göre otomatik kontrol sağlar.
+Kullanıcıdan alınan giriş verileri şunlardır:
 
-✅ 1. Problem Ne?
-İç ortam konforunu artırmak:
+| Girdi | Açıklama |
+|-------|----------|
+| Oda Sıcaklığı (°C) | İç ortam sıcaklığı |
+| Nem (%) | İç ortamdaki bağıl nem seviyesi |
+| CO₂ Seviyesi (ppm) | Karbondioksit yoğunluğu |
+| İnsan Sayısı | Odada bulunan kişi sayısı |
+| Dış Sıcaklık (°C) | Dış ortam sıcaklığı |
 
-Oda sıcaklığı, nem, dış sıcaklık, insan sayısı ve CO₂ seviyesi gibi faktörlere göre,
+---
 
-Otomatik olarak ısıtma düzeyini ve fan hızını ayarlamak.
+## 📤 Çıktılar
 
-Bu, hem enerji verimliliği hem de yaşam konforu açısından günlük hayatta çok yaygın bir problemdir.
+Sistem aşağıdaki iki çıktıyı üretir:
 
-✅ 2. Algoritma: Bulanık Mantık Denetleyici
-Proje şu şekilde çalışır:
+- **Isıtma Düzeyi (%):** Oda sıcaklığını dengelemek için gereken ısıtma oranı.
+- **Fan Hızı (%):** Havanın temizliği ve serinliği için gerekli fan hızı.
 
-Girdiler (5 tane):
+---
 
-Oda sıcaklığı
+## 🛠️ Kullanılan Teknolojiler
 
-Nem seviyesi
+| Teknoloji | Açıklama |
+|-----------|----------|
+| Python | Projenin temel programlama dili |
+| Tkinter | Grafiksel kullanıcı arayüzü (GUI) için |
+| Scikit-Fuzzy | Bulanık mantık işlemleri için |
+| NumPy / SciPy | Sayısal işlemler ve modelleme |
 
-CO₂ seviyesi
+---
 
-Oda içindeki insan sayısı
+## 🖥️ Arayüz Özellikleri
 
-Dış ortam sıcaklığı
+- Kullanıcıdan giriş değerlerini alır.
+- “Hesapla” butonu ile anında çıktı verir.
+- Çıktılar arayüzde sade şekilde gösterilir.
+- Girişler değiştirilerek sistem kolayca yeniden hesaplama yapabilir.
 
-Kurallar (fuzzy logic ile):
+---
 
-Girdilere göre ısıtma ve fan hızını ayarlamak için IF–THEN tarzı bulanık kurallar uygulanır.
+## 🔍 Örnek Kullanım
 
-Örnek kural:Eğer oda sıcaklığı düşük VE insan sayısı fazla ise ISITMA yüksek olsun
-Eğer CO₂ yüksek VE nem yüksekse FAN hızı yüksek olsun
+1. Arayüzü açın.
+2. Giriş kutucuklarına değerleri girin (örn. sıcaklık: 18°C, nem: 70%).
+3. “Hesapla” tuşuna tıklayın.
+4. Sonuçlar (ısıtma düzeyi, fan hızı) anında gösterilecektir.
 
-✅ 3. Arayüz: Kullanıcı Dostu (Tkinter ile)
-Arayüz gui.py içinde oluşturulmuştur ve Python’un Tkinter kütüphanesiyle yazılmıştır.
+---
 
-Girdiler kullanıcı tarafından kolayca elle girilir (input kutuları).
+## 🧠 Örnek Kurallar
 
-Sonuçlar, “Hesapla” butonuna basıldığında net bir şekilde alt tarafta gösterilir.
+- Eğer **oda sıcaklığı düşük** ve **dış sıcaklık çok düşükse**, ısıtma **yüksek** olmalıdır.
+- Eğer **CO₂ seviyesi yüksek** ve **nem de yüksekse**, fan hızı **yüksek** olmalıdır.
+- Eğer **oda sıcaklığı yüksek** ve **dış sıcaklık yüksekse**, ısıtma **düşük** olmalıdır.
 
-Her şey tek bir pencere üzerinde ve sade bir yapıyla tasarlanmıştır.
+---
+
 
 
