@@ -23,10 +23,6 @@ Günlük yaşamda sıkça karşılaşılan iç ortam konforunu artırma ihtiyac�
   - Isıtma Düzeyi (%)
   - Fan Hızı (%)
 
-- Kullanıcı dostu arayüz (Tkinter ile)
-- Python ile geliştirilmiş, modüler yapı
-- Fuzzy Logic sistemiyle karar verme yeteneği
-
  
  ✅ 1. Problem Ne?
 İç ortam konforunu artırmak:
@@ -36,6 +32,7 @@ Oda sıcaklığı, nem, dış sıcaklık, insan sayısı ve CO₂ seviyesi gibi 
 Otomatik olarak ısıtma düzeyini ve fan hızını ayarlamak.
 
 Bu, hem enerji verimliliği hem de yaşam konforu açısından günlük hayatta çok yaygın bir problemdir.
+
 
 ✅ 2. Algoritma: Bulanık Mantık Denetleyici
 Proje şu şekilde çalışır:
@@ -70,6 +67,7 @@ Isıtma düzeyi (%)
 Fan hızı (%)
 
 Bu işlemler, fuzzy_logic.py içinde tanımlanmıştır ve bilimsel scikit-fuzzy kütüphanesi kullanılmıştır.
+
 
 ✅ 3. Arayüz: Kullanıcı Dostu (Tkinter ile)
 Arayüz gui.py içinde oluşturulmuştur ve Python’un Tkinter kütüphanesiyle yazılmıştır.
