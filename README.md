@@ -1,26 +1,45 @@
-# Smart Room Climate Controller 🏠🌡️
+# 🔥 Smart Room Climate Controller
 
-Bu proje, bir odanın ortam koşullarına göre ısıtma ve havalandırma düzeylerini otomatik ayarlayan bir bulanık mantık kontrol sistemidir.
+Bu proje, bir odanın ortam koşullarına göre **ısıtma gücünü** ve **havalandırma fan hızını** otomatik olarak ayarlayan, Python tabanlı bir **bulanık mantık kontrol sistemi** sunar. Sistem, sıcaklık, nem, CO₂ seviyesi, dış sıcaklık ve oda içindeki kişi sayısı gibi etmenleri analiz ederek karar verir.
+
+---
+
+## 🎯 Proje Amacı
+
+Günlük yaşamda sıkça karşılaşılan iç ortam konforunu artırma ihtiyacına yönelik olarak geliştirilen bu uygulama, enerji tasarrufu ve hava kalitesini iyileştirmeyi hedefler. Manuel müdahale olmadan ortam koşullarına göre otomatik kontrol sağlar.
+
+---
 
 ## 🔍 Özellikler
 
-- 5 farklı girdi (sıcaklık, nem, CO2, dış sıcaklık, insan sayısı)
-- 2 çıktı (ısıtma gücü ve fan hızı)
-- Kullanıcı dostu Tkinter arayüzü
-- Fuzzy Logic ile akıllı kontrol
+- **5 Girdi:**
+  - Oda Sıcaklığı (°C)
+  - Nem Seviyesi (%)
+  - Karbon Dioksit (CO₂) Seviyesi (ppm)
+  - Oda İçindeki İnsan Sayısı
+  - Dış Sıcaklık (°C)
 
-## ⚙️ Gereksinimler
+- **2 Çıktı:**
+  - Isıtma Düzeyi (%)
+  - Fan Hızı (%)
 
-```bash
-pip install -r requirements.txt
-```
+- Kullanıcı dostu arayüz (Tkinter ile)
+- Python ile geliştirilmiş, modüler yapı
+- Fuzzy Logic sistemiyle karar verme yeteneği
 
-## 🚀 Çalıştırmak için
+📌 Kullanım Açıklaması
+Program açıldığında kullanıcıdan aşağıdaki değerler istenir:
 
-```bash
-python main.py
-```
+Oda sıcaklığı (°C)
 
-## 📄 Lisans
+Nem oranı (%)
 
-MIT
+CO₂ seviyesi (ppm)
+
+Oda içindeki kişi sayısı
+
+Dış ortam sıcaklığı (°C)
+
+Bu bilgiler girildikten sonra “Hesapla” butonuna basıldığında sistem, bulanık mantık kurallarına göre ısıtma düzeyi ve fan hızı sonuçlarını ekrana yazdırır.
+
+
