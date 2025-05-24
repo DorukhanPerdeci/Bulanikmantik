@@ -1,4 +1,4 @@
-# 🔥 Akıllı Oda İklim Kontrolörü
+# 🔥 Akıllı Oda İklim Kontrolcüsü
 
 Bu proje, bir odanın ortam koşullarına göre **ısıtma gücünü** ve **havalandırma fan hızını** otomatik olarak ayarlayan, Python tabanlı bir **bulanık mantık kontrol sistemi** sunar. Sistem, sıcaklık, nem, CO₂ seviyesi, dış sıcaklık ve oda içindeki kişi sayısı gibi etmenleri analiz ederek karar verir.
 
