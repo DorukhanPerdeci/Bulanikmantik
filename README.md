@@ -27,19 +27,57 @@ Günlük yaşamda sıkça karşılaşılan iç ortam konforunu artırma ihtiyac�
 - Python ile geliştirilmiş, modüler yapı
 - Fuzzy Logic sistemiyle karar verme yeteneği
 
-📌 Kullanım Açıklaması
-Program açıldığında kullanıcıdan aşağıdaki değerler istenir:
+ 
+ ✅ 1. Problem Ne?
+İç ortam konforunu artırmak:
 
-Oda sıcaklığı (°C)
+Oda sıcaklığı, nem, dış sıcaklık, insan sayısı ve CO₂ seviyesi gibi faktörlere göre,
 
-Nem oranı (%)
+Otomatik olarak ısıtma düzeyini ve fan hızını ayarlamak.
 
-CO₂ seviyesi (ppm)
+Bu, hem enerji verimliliği hem de yaşam konforu açısından günlük hayatta çok yaygın bir problemdir.
 
-Oda içindeki kişi sayısı
+✅ 2. Algoritma: Bulanık Mantık Denetleyici
+Proje şu şekilde çalışır:
 
-Dış ortam sıcaklığı (°C)
+Girdiler (5 tane):
 
-Bu bilgiler girildikten sonra “Hesapla” butonuna basıldığında sistem, bulanık mantık kurallarına göre ısıtma düzeyi ve fan hızı sonuçlarını ekrana yazdırır.
+Oda sıcaklığı
+
+Nem seviyesi
+
+CO₂ seviyesi
+
+Oda içindeki insan sayısı
+
+Dış ortam sıcaklığı
+
+Kurallar (fuzzy logic ile):
+
+Girdilere göre ısıtma ve fan hızını ayarlamak için IF–THEN tarzı bulanık kurallar uygulanır.
+
+Örnek kural:
+
+mathematica
+Kopyala
+Düzenle
+Eğer oda sıcaklığı düşük VE insan sayısı fazla ise ISITMA yüksek olsun
+Eğer CO₂ yüksek VE nem yüksekse FAN hızı yüksek olsun
+Çıktılar (2 tane):
+
+Isıtma düzeyi (%)
+
+Fan hızı (%)
+
+Bu işlemler, fuzzy_logic.py içinde tanımlanmıştır ve bilimsel scikit-fuzzy kütüphanesi kullanılmıştır.
+
+✅ 3. Arayüz: Kullanıcı Dostu (Tkinter ile)
+Arayüz gui.py içinde oluşturulmuştur ve Python’un Tkinter kütüphanesiyle yazılmıştır.
+
+Girdiler kullanıcı tarafından kolayca elle girilir (input kutuları).
+
+Sonuçlar, “Hesapla” butonuna basıldığında net bir şekilde alt tarafta gösterilir.
+
+Her şey tek bir pencere üzerinde ve sade bir yapıyla tasarlanmıştır.
 
 
